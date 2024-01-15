@@ -1,0 +1,397 @@
+*,
+*::before,
+*::after{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+
+body{
+     min-width: 100vw;
+     min-height: 100vh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     background-color: var(--body-bg-clr);
+}
+
+:root{
+     --body-bg-clr: #b4a667;
+     --light-yellow-clr: #fed700;
+     --dark-yellow-clr: #cbab00;
+     --shadow-yellow-clr: #988000;
+     --brown-clr: #876a1e;
+     --red-clr: #fe0000;
+     --white-clr: #fff;
+     --dark-clr: #000;
+     --thin-border: 2px solid var(--dark-clr);
+}
+
+.container .telephoneBx{
+     position: relative;
+     width: 520px;
+     /* height: 400px; */
+     padding: 2rem 0;
+     /* background-color: pink; */
+}
+
+.container .telephoneBx .phone-handle{
+     position: relative;
+     width: 445px;
+     height: 28px;
+     background-color: yellow;
+     background: linear-gradient(to bottom, var(--light-yellow-clr) 40%, var(--dark-yellow-clr) 40%, var(--dark-yellow-clr) 80%, var(--shadow-yellow-clr) 0%);
+     border: var(--thin-border);
+     border-radius: 0.4rem;
+     /* position: absolute;
+     left: 50%; */
+     margin: 0 auto;
+}
+
+.container .telephoneBx .phone-handle::before, .phone-handle::after{
+     content: '';
+     position: absolute;
+     width: 40px;
+     height: 14px;
+     border-radius: 0.8rem 0.8rem 0 0;
+     border: var(--thin-border);
+     box-shadow: inset -9px 0 0 rgba(0, 0, 0, 0.3);
+     border-bottom: 0;
+     top: -0.98rem;
+     left: 0.2rem;
+     background-color: var(--brown-clr);
+}
+
+.container .telephoneBx .phone-handle::after{
+     left: 90%;
+}
+
+.container .telephoneBx .wrapper{
+     /* background-color: red; */
+     display: flex;
+     justify-content: space-between;
+     align-items: start;
+     gap: 1rem;
+}
+
+.container .telephoneBx .wrapper .leftBx{
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     /* left: 2.5rem; */
+     padding: 0 1rem;
+}
+
+.container .telephoneBx .wrapper .leftBx .dome-shape{
+     width: 40px;
+     height: 25px;
+     background-color: var(--light-yellow-clr);
+     border-radius: 0.8rem 0.8rem 0 0 ;
+     border: var(--thin-border);
+     border-bottom: 0;
+     position: relative;
+     box-shadow: inset -9px 0 0 rgba(0, 0, 0, 0.3), inset 3px 0 0 var(--white-clr);
+}
+
+.container .telephoneBx .wrapper .leftBx .dome-shape::before{
+     content: '';
+     position: absolute;
+     top: 0.1rem;
+     left: 0.2rem;
+     width: 14px;
+     height: 10px;
+     border-radius: 0.5rem 0 0 0;
+     border-top: 3px solid var(--white-clr);
+     background-color: transparent;
+}
+
+.container .telephoneBx .wrapper .leftBx .dome-shape .rect, .rect-shape .rect{
+     position: absolute;
+     bottom: -30%;
+     left: 50%;
+     transform: translate(-50%, 0%);
+     width: 50px;
+     height: 8px;
+     border-radius: 0.1rem;
+     border: var(--thin-border);
+     background-color: var(--brown-clr);
+}
+
+.container .telephoneBx .wrapper .leftBx .rect-shape{
+     position: relative;
+     width: 80px;
+     height: 38px;
+     background-color: var(--red-clr);
+     margin-top: 0.4rem;
+     border-radius: 0.2rem;
+     border: var(--thin-border);
+     padding: 0.24rem;
+     box-shadow: inset 0px -9px 0 rgba(0, 0, 0, 0.3);
+}
+
+.container .telephoneBx .wrapper .leftBx .rect-shape::before, .rect-shape::after{
+     content: '';
+     position: absolute;
+     width: 4px;
+     height: 6px;
+     border-radius: 0.2rem;
+     background-color: var(--white-clr);
+}
+
+.container .telephoneBx .wrapper .leftBx .rect-shape::after{
+     height: 17px;
+     top: 0.8rem;
+     background-color: var(--white-clr);
+}
+
+.container .telephoneBx .wrapper .leftBx .rect-shape .rect{
+     width: 90px;
+     height: 13px;
+     bottom: -40%;
+     box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.3);
+}
+
+.container .telephoneBx .wrapper .rightBx .circle{
+     position: relative;
+     top: 0.7rem;
+     left: -0.7rem;
+     width: 90px;
+     height: 90px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     border: var(--thin-border);
+     background-color: var(--light-yellow-clr);
+     border-radius: 50%;
+}
+
+.container .telephoneBx .wrapper .rightBx .circle .inner-circle{
+     position: absolute;
+     width: 90%;
+     height: 90%;
+     border-radius: 50%;
+     border: var(--thin-border);
+     background-color: var(--brown-clr);
+     box-shadow: inset 24px 0 0 0 rgba(0, 0, 0, 0.3);
+     transform: rotate(311deg);
+}
+
+.container .telephoneBx .dailBx{
+     /* background-color: rgba(255, 0, 0, 0.348); */
+     width: 100%;
+     position: relative;
+     top: -5rem;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     
+     /* height: 100%; */
+}    
+
+.container .telephoneBx .dailBx .topBx{
+     position: relative;
+     width: 16px;
+     height: 26px;
+     background-color: var(--light-yellow-clr);
+     border: var(--thin-border);
+     padding: 0.3rem 0;
+     border-bottom: 0;
+} 
+
+.container .telephoneBx .dailBx .topBx::before{
+     content: '';
+     left: 0.2rem;
+     position: absolute;
+     width: 3px;
+     height: 14px;
+     background-color: var(--white-clr);
+}
+
+.container .telephoneBx .dailBx .box-1{
+     width: 44px;
+     height: 23px;
+     background-color: var(--light-yellow-clr);
+     border-radius: 2rem;
+     border: var(--thin-border);
+     box-shadow: inset -8px 0 0 0 rgba(0, 0, 0, 0.3);
+}
+
+.container .telephoneBx .dailBx .box-2{
+     width: 40px;
+     height: 25px;
+     border-radius: 0.6rem 0.6rem 0 0;
+     background-color: var(--light-yellow-clr);
+     border: var(--thin-border);
+     margin-top: -0.1rem;
+     box-shadow: inset -8px 0 0 0 rgba(0, 0, 0, 0.3), inset 5px 0 0 0 var(--white-clr);
+}
+
+.container .telephoneBx .dailBx .box-3{
+     width: 100px;
+     height: 60px;
+     border-radius: 1.5rem 1.5rem 0 0;
+     margin-top: -0.1rem;
+     background-color: var(--light-yellow-clr);
+     border: var(--thin-border);
+     box-shadow: inset 0 -12px 0 0 rgba(0, 0, 0, 0.33), inset 8px 0 0 0 var(--white-clr);
+}
+
+.container .telephoneBx .dailBx .box-4{
+     width: 150px;
+     height: 20px;
+     border-radius: 1.5rem 1.5rem 0 0;
+     margin-top: -0.1rem;
+     background-color: var(--light-yellow-clr);
+     border: var(--thin-border);
+     box-shadow: inset 0 -8px 0 0 rgba(0, 0, 0, 0.33), inset 8px 0 0 0 var(--white-clr);
+}
+
+.container .telephoneBx .dailBx .dailerRect{
+     position: relative;
+     width: 280px;
+     height: 150px;
+     border-radius: 1.5rem 1.5rem 0 0;
+     margin-top: -0.1rem;
+     background-color: var(--light-yellow-clr);
+     border: var(--thin-border);
+     box-shadow: inset 36px 0 0 0 rgba(255, 255, 255, 0.43);
+     background-color: red;
+     border-bottom: 0;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+.container .telephoneBx .dailBx .dailerRect::before{
+     content: '';
+     position: absolute;
+     top: 3rem;
+     left: 1rem;
+     width: 7px;
+     border-radius: 0.4rem;
+     height: 90px;
+     background-color: var(--white-clr);
+}
+
+.container .telephoneBx .dailBx .dailerRect .outer-circle{
+     position: absolute;
+     width: 180px;
+     height: 180px;
+     border-radius: 50%;
+     background-color: var(--dark-clr);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     box-shadow: 12px 12px 0 rgba(0, 0, 0, 0.3);
+}
+
+.container .telephoneBx .dailBx .dailerRect .outer-circle .inner-circle{
+     position: absolute;
+     width: 50%;
+     height: 50%;
+     border-radius: 50%;
+     background-color: var(--light-yellow-clr);
+     box-shadow: inset 14px 0 0 0 rgba(0, 0, 0, 0.3);
+     transform: rotate(45deg);
+}
+
+.container .telephoneBx .dailBx .dailerRect .outer-circle .button{
+     display: block;
+     position: absolute;
+     width: 34px;
+     height: 34px;
+     background-color: var(--light-yellow-clr);
+     box-shadow: inset 10px 0 0 0 rgba(0, 0, 0, 0.25);
+     border-radius: 50%;
+}
+
+.container .telephoneBx .dailBx .dailerRect .outer-circle .button:nth-child(1){
+     top: 0.38rem;
+}
+
+.container .telephoneBx .dailBx .dailerRect .outer-circle .button:nth-child(2){
+     top: 1.65rem;
+     left: 1.5rem;
+}
+
+.container .telephoneBx .dailBx .dailerRect .outer-circle .button:nth-child(3){
+     top: 4.65rem;
+     left: 0.36rem;
+}
+
+.container .telephoneBx .dailBx .dailerRect .outer-circle .button:nth-child(4){
+     top: 7.65rem;
+     left: 1.58rem;
+}
+
+.container .telephoneBx .dailBx .dailerRect .outer-circle .button:nth-child(5){
+     top: 8.76rem;
+     left: 4.58rem;
+}
+
+.container .telephoneBx .dailBx .dailerRect .outer-circle .button:nth-child(6){
+     top: 7.56rem;
+     left: 7.58rem;
+}
+
+.container .telephoneBx .dailBx .rect{
+     width: 330px;
+     height: 30px;
+     background-color: var(--red-clr);
+     border: var(--thin-border);
+     box-shadow: inset 14px 0 0 0 rgba(255, 255, 255, 0.58), inset 0 -7px 0 0 rgba(0, 0, 0, 0.3);
+     border-radius: 0.3rem;
+     border-bottom: 0;
+}
+
+.container .telephoneBx .dailBx .bottom-rect{
+     width: 360px;
+     height: 30px;
+     background-color: var(--brown-clr);
+     border: var(--thin-border);
+     box-shadow: inset 0 -10px 0 0 rgba(0, 0, 0, 0.3);
+     border-radius: 0.3rem;
+}
+
+.container .telephoneBx .wrapper .topBx{
+     position: relative;
+     width: 100%;
+     height: 100px;
+     /* background-color: var(--brown-clr); */
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     border-radius: 0 0 1.8rem 1.8rem;
+     border: var(--thin-border);
+     border-top: none;
+}
+
+.container .telephoneBx .wrapper .topBx::before{
+     content: '';
+     position: absolute;
+     width: 97%;
+     height: 93%;
+     /* background-color: orange; */
+     border-radius: 0 0 1.6rem 1.6rem;
+     border: var(--thin-border);
+     border-top: none;
+}
+
+.container .telephoneBx .wrapper .topBx .circular-knob{
+     position: absolute;
+     left: -0.8rem;
+     top: 0;
+     width: 30px;
+     height: 30px;
+     background-color: var(--brown-clr);
+     border: var(--thin-border);
+     border-radius: 50%;
+     box-shadow: inset 8px 0 0 0 rgba(255, 255, 255, 0.63);
+     transform: rotate(45deg);
+}
+
+.container .telephoneBx .wrapper .topBx .circular-knob:nth-child(2){
+     left: 93%;
+}
