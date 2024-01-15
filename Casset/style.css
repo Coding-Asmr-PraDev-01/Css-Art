@@ -1,0 +1,86 @@
+*,
+*::before,
+*::after{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+
+body{
+     min-width: 100vw;
+     min-height: 100vh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+.container .casset{
+     position: relative;
+     background-color: #343434;
+     width: 500px;
+     height: 300px;
+     border-radius: 2rem;
+     display: flex;
+     justify-content: center;
+     align-items: flex-start;
+     padding: 2.5rem;
+     box-shadow: 20px 20px 0px rgba(0, 0, 0, 0.15);
+}
+
+.container .casset .inner-casset{
+     background-color: #fff;
+     position: relative;
+     width: 100%;
+     height: 70%;
+     border-radius: 1rem;
+}
+
+.container .casset .inner-casset .bottomBx{
+     position: absolute;
+     bottom: 1.5rem;
+     width: 100%;
+     display: grid;
+     grid-template-columns: 90px 1fr 90px;
+     height: 70px;
+     background-color: #343434;
+} 
+
+.container .casset .inner-casset .bottomBx .leftBx{
+     display: flex;
+     flex-direction: column;
+}
+
+.container .casset .inner-casset .bottomBx .leftBx span{
+     width: 100%;
+     height: 100%;
+     background-color: rgb(157, 255, 0);
+}
+
+.container .casset .inner-casset .bottomBx .leftBx span:nth-child(2){
+     background-color: orange;
+}
+
+.container .casset .inner-casset .bottomBx .leftBx span:nth-child(3){
+     background-color: rgb(217, 0, 255);
+}
+
+.container .casset .inner-casset .bottomBx .middleBx {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     gap: 1.2rem;
+     padding: 0 1rem;
+}
+
+.container .casset .inner-casset .bottomBx .middleBx .square{
+     width: 80px;
+     height: 40px;
+     background: #fff;
+}
+
+.container .casset .inner-casset .bottomBx .circle {
+     width: 45px;
+     height: 45px;
+     background-color: #fff;
+     border-radius: 50%;
+}
