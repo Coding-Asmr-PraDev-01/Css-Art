@@ -1,0 +1,300 @@
+*,
+*::before,
+*::after{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+
+:root{
+     --body-bg-clr: #cf4656;
+     --controller-bg-clr: #fba417;
+     --border-shine-1-clr: #f66d0c;
+     --border-shine-2-clr: #fbc55e;
+     --control-system-clr: #f86d08;
+     --screen-clr: #848f6f;
+     --screen-cover-clr: #504446;
+     --btn-clr: #66494b;
+}
+
+body{
+     min-width: 100vw;
+     min-height: 100vh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     background-color: var(--body-bg-clr);
+}
+
+.container .gameBx{
+     position: relative;
+     height: 600px;
+     background-color: var(--controller-bg-clr);
+     border: 5px solid #000;
+     box-shadow: inset -15px -5px 0 var(--border-shine-1-clr),
+     inset 15px 5px 0 var(--border-shine-2-clr);
+     border-radius: 0.5rem 0.5rem 2.8rem 0.5rem;
+     overflow: hidden;
+}
+
+.container .gameBx::before{
+     content: '';
+    right: -3.7px;
+    bottom: 0;
+    position: absolute;
+    transform: rotate(45deg) translate(20.1px, 36px);
+    width: 60px;
+    height: 159px;
+    background-color: var(--border-shine-1-clr);
+}
+
+.container .gameBx .inner-container{
+     width: 380px;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+}
+
+.container .gameBx .topBar{
+     width: 100%;
+     height: 28px;
+     display: flex;
+     justify-content: space-between;
+     border-bottom: 5px solid #000;
+}
+
+.container .gameBx .topBar .leftBx, .rightBx{
+     width: 10%;
+     height: 100%;
+     /* background-color: red; */
+}
+
+.container .gameBx .topBar .leftBx{
+     border-right: 5px solid #000;
+}
+
+.container .gameBx .topBar .rightBx{
+     border-left: 5px solid #000;
+}
+
+.container .gameBx .screenBx{
+     /* display: flex;      */
+     position: relative;
+     padding: 1.3rem 0;
+}
+
+.container .gameBx .screenBx .screen-cover{
+     position: relative;
+     width: 280px;
+     height: 230px;
+     border-radius: 0.5rem 0.5rem 2rem 0.5rem;
+     border: 5px solid #000;
+     background-color: var(--screen-cover-clr);
+}
+
+.container .gameBx .screenBx .screen-cover .line{
+     position: absolute;
+     display: block;
+     width: 100px;
+     height: 4px;
+     top: 1rem;
+     left: 1rem;
+     background-color: #000;
+}
+
+.container .gameBx .screenBx .screen-cover .line:nth-child(2){
+     position: absolute;
+     width: 50px;
+     height: 4px;
+     top: 1rem;
+     left: 13rem;
+}
+
+.container .gameBx .screenBx .screen{
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     width: 170px;
+     height: 160px;
+     border: 5px solid #000;
+     background-color: var(--screen-clr);
+     overflow: hidden;
+}
+
+.container .gameBx .screenBx .screen::before{
+     content: '';
+     position: absolute;
+     /* top: 0; */
+     left: -0.2rem;
+     /* bottom: 0; */
+     width: 40.3%;
+     height: 100%;
+     background-color: rgba(255, 255, 255, 0.18);
+     transform: skew(4deg);
+}
+
+.container .gameBx .inner-container .divider{
+     display: flex;
+     align-items: center;
+     width: 100%;
+     gap: 1rem;
+     padding: 0 3rem;
+     /* background-color: red; */
+}
+
+.container .gameBx .divider .line{
+     display: block;
+     width: 100%;
+     height: 4px;
+     background-color: #000;
+}
+
+.container .gameBx .inner-container .divider > div{
+     display: flex;
+     gap: 0.4rem;
+}
+
+.container .gameBx .inner-container .divider > div span{
+     width: 4px;
+     height: 9px;
+     background-color: #000;
+     display: block;
+}
+
+.container .gameBx .wrapper{
+     /* background-color: red; */
+     width: 100%;
+     display: flex;
+     padding: 0 3rem;
+     margin: 1.8rem 0;
+     align-items: center;
+     justify-content: space-between;
+}
+
+.container .gameBx .wrapper .controllerBx{
+     display: flex;
+     width: 135px;
+     align-items: center;
+     background-color: var(--control-system-clr);
+     border-radius: 50%;
+     padding: 1rem;
+     position: relative;
+     box-shadow: 7px 7px 0px var(--btn-clr);
+}
+
+.container .gameBx .wrapper .controllerBx::before{
+     content: '';
+     position: absolute;
+     width: 28px;
+     height: 24px;
+     left: 50%;
+     top: 50%;
+     transform: translate(-50%, -50%);
+     background-color: var(--btn-clr);
+}
+
+.container .gameBx .wrapper .controllerBx .button span{
+     width: 38px;
+     height: 25px;
+     background-color: var(--btn-clr);
+     display: block;
+}
+
+.container .gameBx .wrapper .controllerBx .button:first-child span{
+     border: 4px solid #000;
+     border-right: 0;
+     border-radius: 0.5rem 0 0 0.5rem;
+}
+
+.container .gameBx .wrapper .controllerBx .button:last-child span{
+     border: 4px solid #000;
+     border-left: 0;
+     border-radius: 0 0.5rem 0.5rem 0
+}
+
+.container .gameBx .wrapper .controllerBx div:nth-child(2){
+     display: flex;
+     flex-direction: column;  
+     gap: 1.4rem; 
+}
+
+.container .gameBx .wrapper .controllerBx div:nth-child(2) span{
+     width: 25px;
+     height: 38px;
+}
+
+.container .gameBx .wrapper .controllerBx div:nth-child(2) span:nth-child(1){
+     border: 4px solid #000;
+     border-bottom: 0;
+     border-radius: 0.5rem 0.5rem 0 0;
+
+}
+
+.container .gameBx .wrapper .controllerBx div:nth-child(2) span:nth-child(2){
+     border: 4px solid #000;
+     border-top: 0;
+     border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.container .gameBx .wrapper .attackBtnsBx{
+     width: 50px;
+     height: 100px;
+     border-radius: 2rem;
+     display: flex;
+     flex-direction: column;
+     gap: 1rem;
+     justify-content: center;
+     align-items: center;
+     background-color: var(--control-system-clr);
+     transform: rotate(45deg);
+}
+
+.container .gameBx .wrapper .attackBtnsBx .attack-btn{
+     width: 35px;
+     height: 35px;
+     border-radius: 50%;
+     border: 4px solid #000;
+     background-color: red;
+}
+
+.speakerBx{
+     position: absolute;
+     width: 90px;
+     height: 40px;
+     bottom: 2.3rem;
+     right: 1.2rem;
+     transform: rotate(-45deg);
+     /* background-color: red; */
+     padding: 0.4rem;
+     display: flex;
+     justify-content: space-evenly;
+}
+
+.speakerBx .bar{
+     display: block;
+     width: 4px;
+     height: 100%;
+     background-color: #000;
+}
+
+.decorators{
+     width: 200px;
+     height: 80px;
+     /* background-color: red; */
+     padding: 0 3rem;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     gap: 1.9rem;
+}
+
+.decorators span{
+     display: block;
+     width: 15px;
+     height: 49px;
+     border-radius: 1rem;
+     border: 4px solid #000;
+     transform: rotate(45deg);
+}
