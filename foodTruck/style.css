@@ -1,0 +1,438 @@
+*,
+*::before,
+*::after{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+
+:root{
+     --chocolate-clr: #4a1361;
+     --yellow-clr: #ffe500;
+     --pink-cream-clr: #ffa800;
+     --sky-blur-clr: #c7eeff;
+     --green-clr: #aced36;
+     --blur-clr: #7bd6ff;
+     --pink-clr-1: #fa7876;
+     --pink-clr-2: #f96461;
+     --metalic-clr: #a7a7a7;
+     --common-border: 6px solid var(--chocolate-clr);
+}
+
+body{
+     min-width: 100vw;
+     min-height: 100vh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     background-color: #fff;
+}
+
+html{
+     overflow-x: hidden;
+}
+
+.container{
+     perspective: 400px;
+}
+
+.container .foodTruck{
+     position: relative;
+     width: 1050px;
+     height: 420px;
+     /* background-color: red; */
+}
+
+.container .foodTruck .topBar{
+     width: 100%;
+     height: 50px;
+     /* background-color: orange; */
+     display: flex;
+     align-items: end;
+}
+
+.container .foodTruck .topBar .box{
+     width: 90px;
+     height: 30px;
+     border: var(--common-border);
+     border-bottom: none;
+     margin: 0 2.6rem;
+     overflow: hidden;
+}
+
+.container .foodTruck .topBar .box:nth-child(2){
+     width: 130px;
+     height: 45px;
+     border-radius: 0 1.46rem 0 0;
+}
+
+.container .foodTruck .topBar .box span{
+     display: block;
+     width: 100%;
+     height: 50%;
+     background-color: var(--pink-clr-1);
+}
+
+.container .foodTruck .topBar .box span:nth-child(2){
+     background-color: var(--pink-clr-2);
+}
+
+.container .foodTruck .truckContainer{
+     position: relative;
+     width: 100%;
+     height: 100%;
+     background-color: var(--sky-blur-clr);
+     border: var(--common-border);
+     overflow: hidden;
+     /* display: flex;
+     flex-direction: column; */
+     border-radius: 1.2rem 4rem 1.2rem 1.2rem;
+}
+
+.container .foodTruck .truckContainer .topBx{
+     width: 100%;
+     height: 23px;
+     background-color: var(--yellow-clr);
+     border-bottom: var(--common-border);
+}
+
+.container .foodTruck .truckContainer .middleBx {
+     height: 73%;
+     display: flex;
+     padding: 1.3rem;
+     gap: 1.4rem;
+     /* background-color: red; */
+}
+
+.container .foodTruck .truckContainer .middleBx .leftBx{
+     width: 8%;
+     height: 100%;
+     /* background-color: pink; */
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+}
+
+.container .foodTruck .truckContainer .middleBx .leftBx .box{
+     width: 100%;
+     height: 22px;
+     background-color: var(--pink-cream-clr);
+     border: var(--common-border);
+}
+
+.container .foodTruck .truckContainer .middleBx .windowBx {
+     position: relative;
+     width: 400px;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+}
+
+.container .foodTruck .truckContainer .middleBx .windowBx .grill-line{
+     width: 100%;
+     height: 22px;
+     box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.2);
+     border: var(--common-border);
+     border-radius: 0.6rem;
+     background-color: var(--green-clr);
+}
+
+.container .foodTruck .truckContainer .middleBx .windowBx .topBar{
+     width: 90%;
+     height: 55px;
+     background-color: var(--pink-clr-1);
+     border: var(--common-border);
+     border-top: none;
+}
+
+.container .foodTruck .truckContainer .middleBx .windowBx .window{
+     position: relative;
+     width: 76%;
+     height: 200px;
+     display: flex;
+     padding: 1.2rem;
+     background-color: #fff;
+     border-left: var(--common-border);
+     border-right: var(--common-border);
+     gap: 1.2rem;
+}
+
+.container .foodTruck .truckContainer .middleBx .windowBx .window .glass{
+     position: relative;
+     width: 50%;
+     height: 100%;
+     overflow: hidden;
+     background-color: var(--blur-clr);
+     border-radius: 0.5rem;
+     border: var(--common-border);
+} 
+
+.container .foodTruck .truckContainer .middleBx .windowBx .window .glass::before{
+     content: '';
+     position: absolute;
+     width: 100%;
+     height: 58%;
+     background-color: rgba(0, 0, 0, 0.1);
+     border-radius: 0.8rem;
+}
+
+.container .foodTruck .truckContainer .middleBx .windowBx .window .glass .bar{
+     position: absolute;
+     width: 15px;
+     height: 130%;
+     top: -1rem;
+     right: 3rem;
+     background-color: rgba(255, 255, 255, 0.4);
+     transform: rotate(20deg);
+}
+
+.container .foodTruck .truckContainer .middleBx .windowBx .window .glass .bar:nth-child(2){
+     width: 8px;
+     right: 2.1rem;
+}
+
+.container .foodTruck .truckContainer .middleBx .windowBx .window .glass .bar:nth-child(3){
+     width: 20px;
+     right: 0.1rem;
+}
+
+.curtain{
+     position: absolute;
+     inset: 0;
+     width: 100%;
+     height: 35px;
+     display: flex;
+     /* background-color: red; */
+}
+
+.curtain > span{
+     display: block;
+     width: 70px;
+     height: 32px;
+     border-radius: 0 0 1.3rem 1.3rem;
+     border: var(--common-border);
+     border-top: none;
+     background-color: var(--pink-clr-1);
+     box-shadow: 3px 5px 0 rgba(0, 0, 0, 0.1);
+}
+
+.curtain > span:nth-child(2n){
+     background-color: #fff;
+}
+
+.container .foodTruck .truckContainer .middleBx .rightBx {
+     /* justify-self: flex-end; */
+     margin-left: auto;
+}
+
+.container .foodTruck .truckContainer .middleBx .rightBx .windowBx {
+     width: 200px;
+     height: 120px;
+}
+
+.container .foodTruck .truckContainer .middleBx .rightBx .windowBx .window{
+     border-bottom: var(--common-border);
+     border-bottom-left-radius: 1.2rem;
+     border-bottom-right-radius: 1.2rem;
+}
+
+.container .foodTruck .truckContainer .middleBx .rightBx .windowBx .window .glass{
+     width: 100%;
+}
+
+.container .foodTruck .truckContainer .middleBx .rightBx .windowBx .window .glass .bar{
+     display: none;
+}
+
+.container .foodTruck .truckContainer .door{
+     position: absolute;
+     /* background-color: red; */
+     width: 200px;
+     top: 4rem;
+     border-radius: 1.3rem;
+     border: var(--common-border);
+     background-color: #fff;
+     left: 55%;
+     height: 90%;
+     padding: 1.2rem;
+     box-shadow: inset 0 -60px 0 0 rgba(0, 0, 0, 0.05);
+}
+
+.container .foodTruck .truckContainer .door .window{
+     position: relative;
+     width: 100%;
+     height: 40%;
+     border-radius: 1rem;
+     border: var(--common-border);
+     background-color: var(--blur-clr);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     overflow: hidden;
+}
+
+.container .foodTruck .truckContainer .door .window::before{
+     content: '';
+     position: absolute;
+     bottom: 0;
+     width: 100%;
+     height: 60%;
+     background-color: rgba(255, 255, 255, 0.3);
+     border-radius: 1.8rem 1.8rem 0 0;
+}
+
+.container .foodTruck .truckContainer .door .window .shine{
+     position: relative;
+     width: 90px;
+     height: 110px;
+     background-color: rgba(0, 0, 0, 0.08);
+     border-radius: 2rem;
+}
+
+.container .foodTruck .truckContainer .door .window .shine::before{
+     content: '';
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     width: 15px;
+     height: 100%;
+     background-color: var(--blur-clr);
+}
+
+.container .foodTruck .truckContainer .bottomBx{
+     position: relative;
+     width: 100%;
+     height: 100px;
+     background-color: var(--pink-clr-1);
+     margin-top: 0.7rem;
+     box-shadow: inset 0 -60px 0 0 var(--pink-clr-2);
+}
+
+.container .foodTruck .truckContainer .middleBx .rightBx{
+     /* background-color: red; */
+     display: flex;
+     justify-content: center;
+     flex-direction: column;
+     align-items: center;
+     gap: 2rem;
+}
+
+.container .foodTruck .truckContainer .middleBx .rightBx .outletBx{
+     width: 80px;
+     height: 30px;
+     display: flex;
+     flex-direction: column;
+     height: 50px;
+     gap: 0.2rem;
+}
+
+.container .foodTruck .truckContainer .middleBx .rightBx .outletBx .outlet{
+     width: 100%;
+     height: 20px;
+     background-color: #fff;
+     border: 3px solid var(--chocolate-clr);
+}
+
+.container .foodTruck .truckContainer .bottomBx .buffer{
+     position: absolute;
+     top: 0.5rem;
+     left: 3rem;
+     width: 190px;
+     height: 90px;
+     background-color: var(--chocolate-clr);
+     border-radius: 7rem 7rem 0 0;
+     z-index: 9999;
+}
+
+.container .foodTruck .truckContainer .bottomBx .buffer:nth-child(2){
+     left: 45rem;
+}
+
+.container .foodTruck .wheelBx .wheel{
+     position: absolute;
+     width: 150px;
+     height: 150px;
+     bottom: -9rem;
+     left: 4.56rem;
+     border-radius: 50%;
+     background-color: var(--metalic-clr);
+     transform: rotate(40deg);
+     box-shadow: inset 15px 15px 0 0 rgba(0, 0, 0, 0.3);
+     z-index: 99999;
+}
+
+.container .foodTruck .wheelBx .wheel:nth-child(2){
+     left: 46.5rem;
+}
+
+
+.container .foodTruck .wheelBx .wheel .inner-wheel{
+     position: absolute;
+     width: 80px;
+     height: 80px;
+     border-radius: 50%;
+     background-color: var(--blur-clr);
+     border: var(--common-border);
+     top: 50%;
+     left: 50%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     transform: translate(-50%, -50%);
+}
+
+.container .foodTruck .wheelBx .inner-wheel .box{
+     position: relative;
+     width: 50px;
+     height: 50px;
+     z-index: 999999;
+     /* background-color: red; */
+     transform: rotate(-4deg);
+     padding: 0.4rem;
+}
+
+.container .foodTruck .wheelBx .inner-wheel .box .dot{
+     display: block;
+     position: absolute;
+     width: 14px;
+     height: 14px;
+     border-radius: 50%;
+     left: 0.4rem;
+     background-color: var(--metalic-clr);
+     border: 3px solid var(--chocolate-clr);
+}
+
+.container .foodTruck .wheelBx .inner-wheel .box .dot:nth-child(2){
+     left: 1.8rem;     
+}
+
+.container .foodTruck .wheelBx .inner-wheel .box .dot:nth-child(3){
+     top: 1.8rem;
+     left: 1.8rem;     
+}
+
+.container .foodTruck .wheelBx .inner-wheel .box .dot:nth-child(4){
+     top: 1.8rem;     
+}
+
+.container .road{
+     width: 100%;
+     margin-top: 5rem;
+     height: 90px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     gap: 5rem;
+     transform-style: preserve-3d;
+     perspective: 100px;
+     transform: rotateX(30deg);
+     background-color: var(--chocolate-clr);
+}
+
+.container .road .line{
+     display: block;
+     width: 80px;
+     height: 10px;
+     background-color: #fff;
+}
