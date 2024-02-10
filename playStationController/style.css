@@ -1,0 +1,241 @@
+*,
+*::before,
+*::after{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+
+:root{
+     --controller-bg-clr: #ff8185;
+     --screen-clr: #ffdadb;
+     --grill-clr: #7d7074;
+     --btn-clr: #d8d9d6;
+}
+
+body{
+     min-width: 100vw;
+     min-height: 100vh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     /* background-color: red; */
+}
+
+html{
+     overflow-x: hidden;
+     font-family: sans-serif;
+}
+
+.container .controller{
+     width: 1000px;
+     height: 450px;
+     background-color: var(--controller-bg-clr);
+     border-radius: 5.7rem;
+     box-shadow: inset 9px 9px 20px rgba(255, 255, 255, 0.5),
+                 inset -9px -9px 20px rgba(0, 0, 0, 0.2),
+                 13px 13px 8px rgba(0, 0, 0, 0.2);
+     padding: 2rem 0;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     gap: 0.5rem;
+}
+
+.container .controller .leftBx, .rightBx{
+     flex: 0 0 13%;
+     height: 100%;
+     display: flex;
+     flex-direction: column;
+     /* justify-content: center; */
+     /* background-color: red; */
+     padding: 2rem 0.7rem;
+     
+}
+
+.container .controller .middleBx{
+     flex: 0 0 70%;
+     height: 100%;
+     background-color: transparent;
+     /* border: 2px solid rgb(0, 0, 0, 0.2); */
+     box-shadow: 
+     inset 0 0 1px rgb(0, 0, 0, 0.1),
+     inset 2px 3px 3px rgba(0, 0, 0, 0.4), 
+     inset 18px 16px 9px rgba(255, 255, 255, 0.07),
+     0 3px 8px rgba(255, 255, 255, 0.3);
+     border-radius: 1.4rem;
+}
+
+.circular-btn{
+     width: 70px;
+     height: 70px;
+     border-radius: 50%;
+     background-color: var(--btn-clr);
+     border: 2.7px solid #000;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     align-self:center;
+     box-shadow: -1px -1px 3px rgba(0, 0, 0, 0.83), 4px 4px 10px rgba(0, 0, 0, 0.48);  
+}
+
+.circular-btn .inner-btn{
+     width: 80%;
+     height: 80%;
+     /* background-color: red; */
+     border-radius: 50%;
+     box-shadow: inset 2px 2px 1.6px rgba(0, 0, 0, 0.14), 
+     inset 10px 10px 20px rgba(0, 0, 0, 0.2),
+     3px 1px 2px rgba(255, 255, 255, 0.9);
+     transform: rotate(90deg);
+}
+
+.container .controller .middleBx .screenBx{
+     display: flex;
+     width: 100%;
+     height: 100%;
+     justify-content: center;
+     align-items: center;
+}
+
+.container .controller .middleBx .screenBx .screen{
+     position: relative;
+     width: 86%;
+     height: 87%;
+     background-color: #525b5a;
+     border: 8px solid #000;
+     box-shadow: inset 6px 6px 16px rgb(0, 0, 0, 0.5);
+     overflow: hidden;
+}
+
+.container .controller .middleBx .screenBx .screen::before{
+     content: '';
+     position: absolute;
+     width: 50%;
+     top: -1.6rem;
+     height: 140%;
+     background-color: rgb(255, 255, 255, 0.1);
+     right: -1.5rem; 
+     transform: rotate(15deg);
+}
+
+.container .controller .rightBx {
+     /* border:2px solid red; */
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: space-between;
+}
+
+.container .controller .rightBx .attackBtnBx{
+     position: relative;
+     width: 120px;
+     height: 120px;
+     /* background-color: red; */
+     transform: rotate(45deg);
+}
+
+.container .controller .rightBx .attackBtnBx .attack-btn{
+     position: absolute;
+     display: block;
+     width: 45px;
+     height: 45px;
+     border-radius: 50%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     border: 2px solid #000;
+     background-color: var(--btn-clr);
+     box-shadow: inset 4px 3px 1px rgba(255, 255, 255, 0.9), 
+                 inset -4px -3px 1px rgba(0, 0, 0, 0.2), 
+                 4px 4px 8px rgba(0, 0, 0, 0.28);
+     /* transform: rotate(45deg); */
+}
+
+.container .controller .rightBx .attackBtnBx .attack-btn:nth-child(1){
+     top: 0;
+     left: 4.2rem;
+}
+
+.container .controller .rightBx .attackBtnBx .attack-btn:nth-child(2){
+     top: 0;
+     left: 0;
+}
+
+.container .controller .rightBx .attackBtnBx .attack-btn:nth-child(3){
+     top: 4.2rem;
+     left: 4.2rem;
+}
+
+.container .controller .rightBx .attackBtnBx .attack-btn:nth-child(4){
+     top: 4.2rem;
+     left: 0;
+}
+
+.container .controller .rightBx .attackBtnBx .attack-btn > b{
+     font-weight: 800;
+     color: rgb(0, 0, 0, 0.2);
+     transform: rotate(-45deg);
+}
+
+.container .controller .leftBx{
+     /* background-color: red; */
+     justify-content: space-between;
+}
+
+.container .controller .leftBx .directionBtnBx{
+     /* background-color: red; */
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+}
+
+.container .controller .leftBx .directionBtnBx .btn, .empty-btn{
+     display: block;
+     width: 37px;
+     height: 37px;
+     background-color: #c8c5c5;
+     border-radius: 0.4rem;
+     text-align: center;
+     line-height: 37px;
+}
+
+.container .controller .leftBx .directionBtnBx .btn > i{
+     font-size: 1.5rem;
+     color: #a6a8a7;
+}
+
+.container .controller .leftBx .directionBtnBx .middle .btn:last-child{
+     border: 4px solid #000;
+     border-left: none;
+}
+
+.container .controller .leftBx .directionBtnBx .top > .btn{
+     border: 4px solid #000;
+     border-bottom: none;
+     box-shadow: inset 4px 2px 3px rgba(255, 255, 255, 1),
+     inset -4px 0 3px rgba(255, 255, 255, 1), 3px 3px 2px rgba(0, 0, 0, 0.2), -3px -3px 2px rgba(0, 0, 0, 0.2)  ; 
+}
+
+.container .controller .leftBx .directionBtnBx .middle .btn:nth-child(1){
+     border: 4px solid #000;
+     border-right: none;
+     box-shadow: inset 4px 2px 5px rgba(255, 255, 255, 1); 
+}
+
+.container .controller .leftBx .directionBtnBx .middle .btn:last-child{
+     border: 4px solid #000;
+     border-left: none;
+     box-shadow: inset -4px 2px 5px rgba(255, 255, 255, 1); 
+}
+
+.container .controller .leftBx .directionBtnBx .bottom .btn:first-child{
+     border: 4px solid #000;
+     border-top: none;
+     box-shadow: inset 0 -2px 2.4px rgba(0, 0, 0, 0.5); 
+
+}
+
+.container .controller .leftBx .directionBtnBx .middle{
+     display: flex;
+}
